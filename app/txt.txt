@@ -1,0 +1,75 @@
+import React from 'react';
+import { StyleSheet, View, Text, ScrollView, Image } from 'react-native';
+
+// Import images from the assets folder
+import Image1 from './assets/image/image1.png';
+import Image2 from './assets/image/image2.png';
+import Image3 from './assets/image/image3.png';
+import Image4 from './assets/image/image4.png';
+import Image5 from './assets/image/image5.png';
+import Image6 from './assets/image/image6.png';
+
+const App = () => {
+  return (
+    <ScrollView
+      horizontal
+      showsHorizontalScrollIndicator={false} // Hide the horizontal scroll indicator
+      contentContainerStyle={styles.container}
+    >
+      <View style={styles.box}>
+        <Image source={Image1} style={styles.image} />
+        <Text style={styles.text}>Box 1</Text>
+      </View>
+      <View style={styles.box}>
+        <Image source={Image2} style={styles.image} />
+        <Text style={styles.text}>Box 2</Text>
+      </View>
+      <View style={styles.box}>
+        <Image source={Image3} style={styles.image} />
+        <Text style={styles.text}>Box 3</Text>
+      </View>
+      <View style={styles.box}>
+        <Image source={Image4} style={styles.image} />
+        <Text style={styles.text}>Box 4</Text>
+      </View>
+      <View style={styles.box}>
+        <Image source={Image5} style={styles.image} />
+        <Text style={styles.text}>Box 5</Text>
+      </View>
+      <View style={styles.box}>
+        <Image source={Image6} style={styles.image} />
+        <Text style={styles.text}>Box 6</Text>
+      </View>
+    </ScrollView>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row', // Align boxes horizontally
+    gap: 10, // Space between the boxes
+    padding: 10,
+  },
+  box: {
+    width: 120,
+    height: 140,
+    backgroundColor: '#3498db',
+    justifyContent: 'center', // Center text vertically
+    alignItems: 'center', // Center text horizontally
+    borderRadius: 8,
+    padding: 5,
+  },
+  image: {
+    width: 80,
+    height: 80,
+    borderRadius: 8,
+    marginBottom: 5, // Space between the image and text
+  },
+  text: {
+    color: '#fff',
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+});
+
+export default App;
